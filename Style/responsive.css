@@ -1,4 +1,4 @@
-@media screen and (min-device-width: 360px) and (max-device-width: 640px) {
+@media screen and (min-device-width: 360px) and (max-device-width: 736px) {
   #container #header {
     height: 7vh; }
   #container #sectionOne {
@@ -63,7 +63,7 @@
             margin: 0;
             font-size: 1em; }
   #container #sectionThree {
-    height: 217.5vh;
+    height: auto;
     background-color: #c0ebfb; }
     #container #sectionThree .bcgThree {
       display: none; }
