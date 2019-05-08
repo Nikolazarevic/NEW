@@ -70,7 +70,8 @@
     #container #sectionThree .innerThree .titleThree {
       flex-basis: 5.2%; }
       #container #sectionThree .innerThree .titleThree h3 {
-        color: #2979ff; }
+        color: #2979ff;
+        padding: 10.5%; }
     #container #sectionThree .innerThree .contentThree {
       flex-basis: 94.8%;
       flex-direction: column;
@@ -127,7 +128,7 @@
           align-self: center; }
         #container #sectionFour .innerFour .imgFour .btnImg {
           width: 35%;
-          height: 14%;
+          height: 20%;
           display: block;
           margin: 23% 0 10% 0;
           align-self: center;
