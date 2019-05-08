@@ -94,7 +94,8 @@
       #container #sectionThree .innerThree .contentThree .row .innerRow .contentRow3 {
         margin-bottom: 22.2%; }
   #container #sectionFour {
-    height: 81.2vh; }
+    height: 81.2vh;
+    height: auto; }
     #container #sectionFour:before {
       display: none; }
     #container #sectionFour .innerFour {
@@ -137,6 +138,8 @@
           color: #ffffff;
           font-size: 15px;
           position: relative; }
+          #container #sectionFour .innerFour .imgFour .btnImg p {
+            padding: 15px; }
   #container #footer {
     height: 61.8vh; }
     #container #footer .innerFooter {
