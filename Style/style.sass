@@ -1,0 +1,453 @@
+$heading1: 2.5em
+$heading2: 2.1875em
+$heading3: 1.75em
+$heading4: 1.5em
+$heading5: 1.3125em
+$heading6: 1em
+$heading7: 0.6875em
+
+*
+	margin: 0
+	padding: 0
+
+// START CONTAINER
+
+#container
+	width: 100%
+	max-width: 1920px
+	height: auto
+	display: flex
+	flex-direction: column
+	background-color: transparent
+	transition: 1s
+
+	// START HEADER
+
+	#header
+		width: 100%
+		height: 13.4vh
+		.innerHeader
+			width: 85%
+			height: 100%
+			margin: 0 auto
+			display: flex
+			.logo
+				height: 100%
+				flex-grow: 1
+				display: flex
+				align-items: center
+				img
+					&:hover
+						cursor: pointer
+			.sideBar
+				@extend .logo
+				justify-content: flex-end
+
+	// START NAVIGATION BAR
+
+	#navBcg
+		width: 0
+		height: 100vh
+		position: fixed
+		#navBar
+			width: 0
+			right: 0
+			height: 100vh
+			position: fixed
+			z-index: 100
+			display: flex
+			flex-direction: column
+			transition: 1s
+			background-color: #ffffff
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+			.menu
+				flex-basis: 12%
+				margin-left: 14.4%
+				display: flex
+				align-items: center
+				h6
+					font-size: $heading6
+					color: #707070
+			.nav
+				flex-basis: 88%	
+				margin-left: 14.4%
+				a
+					text-decoration: none
+					color: #707070
+					// transition: .3s
+				h3
+					font-size: $heading3
+					margin: 16% 0
+					// transition: .3s
+	// START SECTION ONE
+
+	#sectionOne
+		width: 100%
+		height: 70.7vh
+		display: flex
+		.innerOne
+			width: 85%
+			height: 100%
+			margin: 0 auto
+			display: flex
+			align-self: center
+			.leftSide
+				flex-basis: 43%
+				display: flex
+				align-items: center
+				.title
+					width: 100%
+					height: auto
+					h2
+						font-size: $heading2
+						color: #2f2b2b
+						span
+							color: #fe5b60
+					h3
+						font-size: $heading3
+						margin-top: 20px
+						color: #c6c5c2
+			.rightSide
+				flex-basis: 57%
+				display: grid
+				grid-template-columns: 28% 28% 16% 28%
+				grid-template-rows: repeat(3, 1fr)
+				grid-template-areas: "box1 box1 box2 box5""box1 box1 box6 box5""box3 box4 box4 box5"
+				.box1
+					grid-area: box1
+					background-color: #fe5b60
+					display: flex
+					flex-direction: column
+					justify-content: space-between
+					color: #ffffff
+					.titles
+						margin: 4%
+						color: #ffffff
+						h7
+							font-size: $heading7
+							letter-spacing: 2px
+							color: rgba(0,0,0, .6)
+							font-weight: bold
+						h5
+							font-size: $heading5
+							margin-top: 10px
+					.title2
+						margin: 4%
+						h6
+							font-size: $heading6
+							text-decoration: underline
+				.box2
+					@extend .box1
+					grid-area: box2
+					background-color: #7152c6
+				.box3
+					@extend .box1
+					grid-area: box3
+					background-color: #2979ff
+				.box4
+					@extend .box1
+					grid-area: box4
+					background-color: #ffd400
+				.box5
+					grid-area: box5
+					// background-color: #ffffff
+					display: flex
+					align-items: center
+					h4
+						font-size: $heading4
+						color: #2f2b2b
+				.box6
+					background-color: transparent
+
+	// START TWO
+
+	#sectionTwo
+		width: 100%
+		height: 120vh
+		margin-top: 1.6vh
+		display: flex
+		position: relative
+		&:after
+			content: ''
+			width: 2px
+			height: 22.46%
+			background-color: #c6c5c2
+			position: absolute
+			left: 67.27%
+			top: 0
+			z-index: -99
+		&:before
+			content: ''
+			width: 2px
+			height: 13.87%
+			background-color: #c6c5c2
+			position: absolute
+			left: 50.14%
+			bottom: 0
+			margin: 28px 0
+		.innerTwo
+			width: 85%
+			height: 56.8%
+			background-color: #a687fb
+			margin: auto
+			display: flex
+			flex-direction: column
+			.topSide
+				width: 100%
+				height: 18%
+				display: flex
+				.title
+					margin: auto
+					h3
+						margin: auto
+						font-size: $heading3
+						color: #ffd400
+			.downSide
+				width: 100%
+				height: 82%
+				display: flex
+				flex-direction: row
+				.imgSide
+					flex-basis: 50%
+					img
+						width: 51%
+						margin: 6% 17%
+				.textSide
+					flex-basis: 50%
+					margin: 0 0 10% 0
+					p
+						color: #ffffff
+						font-size: $heading6
+						margin: 8% 17% 0 0
+						line-height: 1.2
+	
+	// START SECTION THREE
+
+	#sectionThree
+		width: 100%
+		height: 112vh
+		position: relative
+		.bcgThree
+			position: absolute
+			width: 100%
+			background-color: #c0ebfb
+			left: 0
+			height: 51.3%
+			z-index: -99
+		.innerThree
+			width: 75%
+			height: 100%
+			display: flex
+			flex-direction: column
+			margin: 0 auto
+			.titleThree
+				width: 100%
+				flex-basis: 10.5%
+				display: flex
+				h3
+					font-size: $heading3
+					margin: auto
+					color: #ffffff
+			.contentThree
+				width: 100%
+				flex-basis: 89.5%
+				display: flex
+				flex-direction: row
+				.row
+					flex-basis: 33.33%
+					.innerRow
+						width: 100%
+						height: 100%
+						display: flex
+						flex-direction: column
+						.imgRow
+							flex-basis: 39.5%
+							img
+								width: 68.5%
+								margin-top: 12%
+							.titleRow
+								width: 68.5%
+								margin: 9% 0
+								text-align: center
+								position: relative
+								&:after
+									position: absolute
+									content: ''
+									width: 2px
+									height: 503%
+									border-left: 2px dotted #c6c5c2
+									right: 50%
+									left: 50%
+									transform: translate(-50%, 0)
+									margin: 6% 0 13% 0
+								h5
+									font-size: $heading5
+									color: #757575
+						.contentRow
+							flex-basis: 60.5%
+							text-align: center
+							p
+								width: 68.5%
+								margin-top: 34%
+								font-size: $heading6
+								color: #757575
+				.row2
+					.inrR2
+						.imgRow2
+							display: flex
+							flex-direction: column
+							align-items: center
+						.contentRow2
+							@extend .imgRow2
+				.row3
+					.inrR3
+						.imgRow3
+							display: flex
+							flex-direction: column
+							align-items: flex-end
+						.contentRow3
+							@extend .imgRow3
+
+	// START SECTION FOUR
+
+	#sectionFour
+		width: 100%
+		height: 52.8vh
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			height: 2px
+			width: 80%
+			top: 0
+			right: 50%
+			left: 50%
+			transform: translate(-50%, 0)
+			background-color: #c6c5c2
+		.innerFour
+			height: 100%
+			width: 56%
+			margin: 0 auto
+			display: flex
+			flex-direction: row
+			position: relative
+			.contentFour
+				width: 42%
+				height: 47%
+				margin-top: 10.3%
+				position: absolute
+				left: 0
+				// line-height: 1.7
+				
+				h2
+					font-size: $heading2
+					position: absolute
+					top: 0
+					color: #2979ff
+				.btn
+					width: 31%
+					height: 17%
+					background-color: #fe5b60
+					text-decoration: none
+					border: none
+					position: absolute
+					bottom: 0
+					p
+						color: #ffffff
+						font-size: $heading6
+					&:hover
+						cursor: pointer
+			.imgFour
+				width: 61%
+				height: auto
+				margin: 7% 0 0 0
+				position: absolute
+				right: 0
+				img
+					width: 100%
+				.btnImg
+					display: none
+					width: 31%
+					height: 17%
+					background-color: #fe5b60
+					text-decoration: none
+					border: none
+					position: absolute
+					bottom: 0
+					p
+						color: #ffffff
+						font-size: $heading6
+					&:hover
+						cursor: pointer
+
+	// START FOOTER
+
+	#footer
+		width: 100%
+		height: 46.8vh
+		background-color: #445ea0
+		.innerFooter
+			width: 85%
+			height: 100%
+			margin: 0 auto
+			display: flex
+			flex-direction: row
+			.row
+				flex-basis: 33.33%
+				height: 100%
+			.left
+				width: 100%
+				height: 55%
+				margin-top: 7%
+				color: #ffffff
+				.contact
+					display: flex
+					flex-direction: row
+					align-items: center
+					margin-bottom: 5%
+					h6
+						font-size: $heading6
+					.firstChaild
+						margin-left: 5%
+					img
+						margin: 0 3.3% 0 0
+				.adress
+					h6
+						font-size: $heading6
+						margin-bottom: 4%
+					p
+						font-size: $heading6
+						margin-bottom: 3%
+			.center
+				@extend .left
+				p
+					font-size: $heading6
+					margin: 0 0 5% 25%
+			.right
+				@extend .left
+				height: 62.5%
+				.message
+					display: flex
+					flex-direction: column
+					height: 100%
+					label
+						font-size: $heading6
+						margin-bottom: 6%
+					#fname
+						height: 100%
+						resize: none
+						border: none
+					.question
+						margin-top: 8.3%
+						width: 15%
+						height: 19%
+						align-self: flex-end
+						font-size: $heading7
+						background-color: #ffd400
+						color: #ffffff
+						text-decoration: none
+						border: none
+
+
+
+
