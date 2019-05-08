@@ -134,7 +134,8 @@
           border-radius: 5px;
           font-weight: bolder;
           color: #ffffff;
-          font-size: 15px; }
+          font-size: 15px;
+          position: relative; }
   #container #footer {
     height: 61.8vh; }
     #container #footer .innerFooter {
